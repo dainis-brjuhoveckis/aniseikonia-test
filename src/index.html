@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Redze 2022-10-31 0014</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="settings">
+  <div id="colors">
+    <div>
+      Fona krāsa
+      <label for="backgroundRed">
+        R:
+      </label>
+      <input type="number" min="0" max="255" id="backgroundRed" name="backgroundRed" />
+      <label for="backgroundGreen">
+        G:
+      </label>
+      <input type="number" min="0" max="255" id="backgroundGreen" name="backgroundGreen" />
+      <label for="backgroundBlue">
+        B:
+      </label>
+      <input type="number" min="0" max="255" id="backgroundBlue" name="backgroundBlue" />
+      <span id="backgroundColorPicker" />
+    </div>
+
+    <div>
+      Augšējā pusapļa krāsa
+      <label for="topRed">
+        R:
+      </label>
+      <input type="number" min="0" max="255" id="topRed" name="topRed" />
+      <label for="topGreen">
+        G:
+      </label>
+      <input type="number" min="0" max="255" id="topGreen" name="topGreen" />
+      <label for="topBlue">
+        B:
+      </label>
+      <input type="number" min="0" max="255" id="topBlue" name="topBlue" />
+      <span id="topColorPicker" />
+    </div>
+
+    <div>
+      Apakšējā pusapļa krāsa
+      <label for="bottomRed">
+        R:
+      </label>
+      <input type="number" min="0" max="255" id="bottomRed" name="bottomRed" />
+      <label for="bottomGreen">
+        G:
+      </label>
+      <input type="number" min="0" max="255" id="bottomGreen" name="bottomGreen" />
+      <label for="bottomBlue">
+        B:
+      </label>
+      <input type="number" min="0" max="255" id="bottomBlue" name="bottomBlue" />
+      <span id="bottomColorPicker" />
+    </div>
+  </div>
+
+  <div id="numericSettings">
+    <div>
+      <label for="initialDiameter">
+        Abu pusapļu sākotnējais diametrs (pikseļos):
+      </label>
+      <input type="number" id="initialDiameter" name="initialDiameter" min="10" max="1000" value="208" />
+    </div>
+
+    <div>
+      <label for="distance">
+        Attālums starp pusapļiem (pikseļos):
+      </label>
+      <input type="number" id="distance" name="instance" min="0" max="50" value="9" />
+    </div>
+
+    <div>
+      <label for="stepDelta">
+        Solis (pikseļos), ar kādu dalībnieks
+        mērījuma laikā maina diametru apakšējam
+        pusaplim:
+      </label>
+      <input type="number" id="stepDelta" name="stepDelta" min="1" max="10" value="1" />
+    </div>
+
+    <div>
+      <label for="rotate">
+        Pusapļu pagrieziena leņķis:
+      </label><br />
+      <input type="range" id="rotate" name="rotate" min="0" max="270" value="0" step="90" list="tickmarks" />
+
+      <datalist id="tickmarks">
+        <option value="0" label="0°"></option>
+        <option value="90" label="90°"></option>
+        <option value="180" label="180°"></option>
+        <option value="270" label="270°"></option>
+      </datalist>
+    </div>
+  </div>
+</div>
+
+<div>
+  Pusapļa izmēru maina ar klaviatūras bultiņām ↑ un ↓. (Var gadīties, ka pirms tam jāuzklikšķina uz pusapļa ar peli. Nākošajā versijā to realizēs ar pogu "Sākt".)
+</div>
+
+<br>
+
+<div>
+  <canvas id="canvas" width="400" height="300" />
+</div>
+
+<div>
+  <label for="deltaPx">
+    Δ pikseļi
+  </label>
+  <input type="text" readonly name="deltaPx" id="deltaPx" value="0" />
+</div>
+
+<br>
+<div>
+  Versija: 2022-10-31 0014
+<div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/@jaames/iro/dist/iro.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

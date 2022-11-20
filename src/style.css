@@ -1,0 +1,39 @@
+input {
+  max-width: 4em;
+}
+
+#colors {
+  display: flex;
+  flex-direction: row;
+}
+
+#colors > div {
+  margin: 1em;
+}
+
+#numericSettings {
+  display: flex;
+  flex-direction: row;
+}
+
+#numericSettings > div {
+  margin: 1em;
+  flex: 1;
+}
+
+datalist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+}
+
+option {
+  padding: 0;
+}
+
+input[type="range"] {
+  width: 200px;
+  max-width: 200px;
+  margin: 0;
+}
